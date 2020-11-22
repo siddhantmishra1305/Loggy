@@ -29,25 +29,30 @@ public class Loggy{
         }
     }
     
-    static public func log(value:String,type:logType){
+    static public func log(value:String,type:logType,
+                           fileName: String = #file,
+                           functionName: String = #function,
+                           lineNumber: Int = #line,
+                           columnNumber: Int = #column){
+        
         var logLine = String()
         
         switch type {
         
         case .Error:
-            logLine = "\n \(type.rawValue) : \(Date()) : \(value)"
+            logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(lineNumber) | \(value)\n"
             break
             
         case .Verbose:
-            logLine = "\n \(type.rawValue) : \(Date()) : \(value)"
+            logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(lineNumber) | \(value)\n"
             break
             
         case .Info:
-            logLine = "\n \(type.rawValue) : \(Date()) : \(value)"
+            logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(lineNumber) | \(value)\n"
             break
             
         case .Warning:
-            logLine = "\n \(type.rawValue) : \(Date()) : \(value))"
+            logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(lineNumber) | \(value)\n"
             break
         }
         
