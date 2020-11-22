@@ -37,22 +37,23 @@ public class Loggy{
         
         var logLine = String()
         
+        let file = fileName.components(separatedBy: "'\'").last
         switch type {
         
         case .Error:
-            logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(lineNumber) | \(value)\n"
+            logLine = "\(type.rawValue) | \(Date()) | \(file ?? "") | \(functionName) |\(lineNumber) | \(value)\n"
             break
             
         case .Verbose:
-            logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(lineNumber) | \(value)\n"
+            logLine = "\(type.rawValue) | \(Date()) | \(file ?? "") | \(lineNumber) | \(value)\n"
             break
             
         case .Info:
-            logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(lineNumber) | \(value)\n"
+            logLine = "\(type.rawValue) | \(Date()) | \(file ?? "") | \(lineNumber) | \(value)\n"
             break
             
         case .Warning:
-            logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(lineNumber) | \(value)\n"
+            logLine = "\(type.rawValue) | \(Date()) | \(file ?? "") | \(lineNumber) | \(value)\n"
             break
         }
         
