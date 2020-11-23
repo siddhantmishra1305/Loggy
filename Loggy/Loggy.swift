@@ -29,7 +29,7 @@ public class Loggy{
         }
     }
     
-    static func setup(){
+    static public func setup(){
         NSSetUncaughtExceptionHandler { exception in
             Loggy.log(value: exception.debugDescription, type: .Error)
         }
