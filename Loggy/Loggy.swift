@@ -29,6 +29,12 @@ public class Loggy{
         }
     }
     
+    func setup(){
+        NSSetUncaughtExceptionHandler { exception in
+            Loggy.log(value: exception.debugDescription, type: .Error)
+        }
+    }
+    
     static public func log(value:String,type:logType,
                            fileName: String = #file,
                            functionName: String = #function,
