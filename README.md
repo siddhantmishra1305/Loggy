@@ -69,6 +69,8 @@ end
   <img width="430" height="300" src="https://github.com/siddhantmishra1305/Loggy/blob/master/LogDetails.png" title="Log Report" float=left>
 </p>
 
+**Note:** It automatically creates a new log file every 24 hrs.
+
 ## Coming Soon
 - Carthage Support
 - macOS,tvOS and watchOS support
