@@ -68,7 +68,6 @@ end
 ## Coming Soon
 - Carthage Support
 - macOS,tvOS and watchOS support
-- 
 
 ## Author
 - [Siddhant Mishra](https://www.linkedin.com/in/siddhant-mishra-722834105)
