@@ -41,33 +41,37 @@ public class Loggy{
                            lineNumber: Int = #line,
                            columnNumber: Int = #column){
         
-        var logLine = String()
-    
-        switch type {
-        
-        case .Error:
-            logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(functionName) |\(lineNumber) | \(value)\n"
-            break
+        DispatchQueue.main.async {
             
-        case .Verbose:
-            logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(functionName) |\(lineNumber) | \(value)\n"
-            break
+            var logLine = String()
             
-        case .Info:
-            logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(functionName) |\(lineNumber) | \(value)\n"
-            break
             
-        case .Warning:
-            logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(functionName) |\(lineNumber) | \(value)\n"
-            break
-        }
-        
-        
-        if let localLogPath = logFilePath{
-            do{
-                try logLine.appendLine(to: localLogPath)
-            }catch {
-                print("Exception:\(error.localizedDescription)")
+            switch type {
+            
+            case .Error:
+                logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(functionName) |\(lineNumber) | \(value)\n"
+                break
+                
+            case .Verbose:
+                logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(functionName) |\(lineNumber) | \(value)\n"
+                break
+                
+            case .Info:
+                logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(functionName) |\(lineNumber) | \(value)\n"
+                break
+                
+            case .Warning:
+                logLine = "\(type.rawValue) | \(Date()) | \(fileName) | \(functionName) |\(lineNumber) | \(value)\n"
+                break
+            }
+            
+            
+            if let localLogPath = logFilePath{
+                do{
+                    try logLine.appendLine(to: localLogPath)
+                }catch {
+                    print("Exception:\(error.localizedDescription)")
+                }
             }
         }
     }
