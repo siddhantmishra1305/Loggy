@@ -44,6 +44,10 @@ end
   Loggy.log(value: "log system info", type: .Verbose)
   Loggy.log(value: "Warning recieved", type: .Warning)
 ```
+4. Get Path to logfile
+```swift
+  Loggy.logFilePath
+```
 
 ### Mac app to view analytics
 
