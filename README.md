@@ -3,7 +3,7 @@
 </p>
 
 # Loggy
-[![Pod Version](https://img.shields.io/badge/version-1.0.0-blue)](http://cocoadocs.org/docsets/CocoaLumberjack/)
+[![Pod Version](https://img.shields.io/badge/version-1.0.0-blue)]()
 [![Pod Platform](https://img.shields.io/badge/platform-ios-brightgreen)]()
 [![Pod License](https://img.shields.io/hexpm/l/plug)](https://opensource.org/licenses/Apache-2.0)
 
